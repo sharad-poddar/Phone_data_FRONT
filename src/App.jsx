@@ -4,10 +4,11 @@ import axios from 'axios';
 export default function App(){
 
     const [data, setData] = React.useState([]);
+    const baseURL = '/api/data'
 
     React.useEffect(()=>{
 
-        axios.get('http://localhost:4000/api/data')
+        axios.get(baseURL)
         .then(res => {
             console.log(res);
             setData(res.data);
