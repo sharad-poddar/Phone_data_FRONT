@@ -13,7 +13,6 @@ export default function App(){
             console.log(res);
             setData(res.data);
         })
-
     },[])
 
     const data_comp_array = data.map(({id, name, phone}, index)=>{
